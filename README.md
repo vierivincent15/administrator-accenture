@@ -4,6 +4,8 @@ Full Stack web development for Administrator
 These files need to be executed with node.js environment and node-modules.
 Node.js environment can be downloaded from https://nodejs.org/en/download/
 
+These steps need to be done in **sequential order**
+
 Required node-modules can be obtained by executing these lines in the command prompt:
 - npm init
 
@@ -16,4 +18,3 @@ Lastly, server can be executed by executing:
 
 Web application can be accessed from:
 - localhost:3000
-only after bringing up the server
