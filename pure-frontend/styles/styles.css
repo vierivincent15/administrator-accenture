@@ -3,10 +3,6 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
 }
 
 
-.item-separation{
-  margin-right: 50px;
-}
-
 .logo-design{
   max-width: 150px;
   max-height: 150px;
@@ -50,37 +46,26 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
 }
 
 .homepage-design{
+  margin-top: 20vh;
+}
+
+.align-text{
+  margin-top: 10vh;
   text-align: center;
-  color: #FFFFFF;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: 90vh;
 }
 
-
-.homepage-design p:nth-child(1){
-  font-size: 40px;
+.align-text p{
+  font-size: 20px;
+  padding-top: 30px;
 }
 
-.homepage-design p:nth-child(2){
-  font-size: 16px;
-}
-
-
-.btn-design{
-  font-size: 14px;
-  border-radius: 5px;
-}
 
 /*login.html & admin.html*/
 .login-design{
-  background-color: #d7dde5;
+  background-color: rgba(215,221,229,0.75);
   width: 400px;
   /*height: 320px;*/
-  height: 280px;
+  height: 250px;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;

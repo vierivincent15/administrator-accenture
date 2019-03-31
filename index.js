@@ -17,9 +17,9 @@ router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/pure-frontend/index.html'));
 });
 
-router.get('/admin-login',function(req,res){
-  res.sendFile(path.join(__dirname+'/pure-frontend/pages/admin.html'));
-});
+// router.get('/admin-login',function(req,res){
+//   res.sendFile(path.join(__dirname+'/pure-frontend/pages/admin.html'));
+// });
 
 router.get('/home',function(req,res){
   res.sendFile(path.join(__dirname+'/pure-frontend/pages/home.html'));
