@@ -9,6 +9,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../images/cs-logo-1.png" type="image/png">
   </head>
 
   <body class="w3-theme-l5">
@@ -22,7 +23,7 @@
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Home"><i class="fa fa-home"></i></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Notification"><i class="fa fa-bell"></i></a>
-      <span class="w3-bar-item w3-hide-small w3-right w3-padding-large toChange" title="My Account">John Doe</span>
+      <span class="w3-bar-item w3-hide-small w3-right w3-padding-large accName" title="My Account">John Doe</span>
      </div>
     </div>
 
@@ -45,7 +46,7 @@
             <div class="w3-container">
              <h4 class="w3-center">My Profile</h4>
              <p class="w3-center"><img src="../images/user-logo.png" style="height:50px;width:50px" alt="Avatar"></p>
-             <p class="w3-center toChange">John Doe</p>
+             <p class="w3-center accName">John Doe</p>
              <hr>
              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Customer Relation, API</p>
              <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Technology Department</p>
@@ -72,12 +73,15 @@
           <div id="root-home"></div>
 
           <!--
-          <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-            <span class="w3-right w3-margin-right w3-opacity">pending</span>
-            <h4 class="w3-left">Vieri Vincent</h4><br>
-            <hr class="w3-clear">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-wrench"></i>  Solve Issue</button>
+          <div class='w3-container w3-card w3-white w3-round w3-margin ticket-card' id='" + tixId + "'>
+            <br>
+            <span class='w3-right w3-margin-right w3-opacity'>" + status + "</span>
+            <h3 class='cat-design'>" + category + "</h3>
+            <h5 class='w3-left'>" + subject + "</h5>
+            <br>
+            <hr class='w3-clear'>
+            <p>" + details + "</p>
+            <button type='button' class='w3-button w3-theme-d1 w3-margin-bottom'><i class='fa fa-wrench'></i>  Solve Issue</button>
           </div>
           -->
 
@@ -109,7 +113,7 @@
 
     <!-- Footer -->
     <footer>
-     <div class="footer-design fixed-bottom">
+     <div class="footer-design">
        <span class="left-footer"><a href=# class="text-muted">Terms of Use - </a><a href=# class="text-muted">Privacy Policy - </a><a href=# class="text-muted">About Us - </a></span>
        &nbsp;
        <span class="text-muted right-footer">Copyright © 2019 Cohort 1 Group 5. All Rights Reserved</span>
