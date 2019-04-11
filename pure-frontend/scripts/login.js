@@ -16,7 +16,7 @@ function checkInput(admin, pw, verf){
 
 function adminLogin(admin, pw, verf){
   $.ajax({
-                url: "/loginadmin",
+                url: "/loginAdmin",
                 type: "post",
                 data: {"admin": admin, "password": pw},
                 success: function (res) {
@@ -35,7 +35,7 @@ function adminLogin(admin, pw, verf){
 
 function verifyUser(verfInput){
   $.ajax({
-                url: "/retrieveadmindetails",
+                url: "/retrieveAdminDetails",
                 type: "get",
                 success: function (res) {
                   let verfCode = res["verf"];

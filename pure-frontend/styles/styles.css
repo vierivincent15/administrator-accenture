@@ -87,6 +87,11 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
   border-radius: 0px;
 }
 
+.image-padding{
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
 /*ticketchoose.html*/
 .no-topdown{
   margin-bottom: 3px;
@@ -116,13 +121,6 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
 }
 
 /*ticketdetails*/
-
-.reply-card-design{
-
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .reply-sticky{
   position: sticky;
   top: 50px;
@@ -151,7 +149,47 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
 }
 
 .history-card-design{
-  max-height: 260px;
+  max-height: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.user-msg{
+  max-width: 60%;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 10px;
+  /*border-width: 0.5px;
+  border-style: solid;
+  border-color: #989898;*/
+  background-color: #F5F5F5;
+}
+
+.admin-msg{
+  max-width: 60%;
+  text-align: right;
+  padding: 5px 10px;
+  border-radius: 10px;
+  /*border-width: 0.5px;
+  border-style: solid;
+  border-color: #313131;*/
+  background-color: #0076FF;
+  color: #FFFFFF;
+}
+
+.align-right{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.align-left{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: auto;
 }

@@ -14,38 +14,28 @@
 
   <body class="w3-theme-l5">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="../scripts/onlaunch-ticketchoose.js"></script>
+    <script src="../scripts/redirect.js"></script>
+    <script src="../scripts/onlaunch/onlaunch-ticketchoose.js"></script>
 
     <!-- Navbar -->
     <div class="w3-top">
-     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Home"><i class="fa fa-home"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Notification"><i class="fa fa-bell"></i></a>
-      <span class="w3-bar-item w3-hide-small w3-right w3-padding-large" title="My Account" id="admin-name">John Doe</span>
+     <div class="w3-bar w3-theme-d2 w3-center w3-large">
+       <div class="image-padding">
+         <img class="navbar-brand logo-design item-separation" src="../images/logo.png">
+       </div>
      </div>
-    </div>
-
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">...</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Account Settings</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Notification</a>
     </div>
 
     <div class="w3-container w3-content align-middle" style="max-width:1400px;margin-top:80px;">
       <h1>ATTENDING TO THIS TICKET?</h1>
         <div class="w3-container w3-card w3-white w3-round w3-margin view-card-design" style="max-width:60%"><br>
-          <span class="w3-right w3-margin-right w3-opacity">pending</span>
-          <h3 id="category"> Category </h3>
-          <h4 class="w3-left" id="subject">Subject: Bacon ipsum is an alterative for Lorem ipsum</h4><br>
+          <span class="w3-right w3-margin-right w3-opacity" id="status"></span>
+          <h3 id="category"></h3>
+          <h4 class="w3-left" id="subject"></h4><br>
           <hr class="w3-clear">
-          <p id="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p id="details"></p>
           <hr class="w3-clear">
-          <div style="text-align:center">
-            <img src="../images/dummy-image.PNG" class="ticket-image" id="image">
+          <div style="text-align:center" id="list-image">
           </div>
           <hr class="w3-clear">
           <h4 class="w3-left no-topdown">Details:</h4>
@@ -56,13 +46,13 @@
               <p class="no-topdown">Customer:</p>
               <p class="no-topdown">Customer's Email: </p>
               <p class="no-topdown">Customer's Mobile Number: </p>
-              <p class="no-topdown">Customer's Comapany: </p>
+              <p class="no-topdown">Customer's Company: </p>
             </div>
             <div class="w3-col m5">
-              <p class="no-topdown" id="name">John Doe</p>
-              <p class="no-topdown" id="email">johndoe@yahoo.com</p>
-              <p class="no-topdown" id="phone">91919191</p>
-              <p class="no-topdown" id="company">SUTD</p>
+              <p class="no-topdown" id="name"></p>
+              <p class="no-topdown" id="email"></p>
+              <p class="no-topdown" id="phone"></p>
+              <p class="no-topdown" id="company"></p>
             </div>
           </div>
           </br>

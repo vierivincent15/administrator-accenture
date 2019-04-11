@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>ACNAPI - Admin Home</title>
+    <title>ACNAPI - Attending Tickets</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,14 +15,14 @@
   <body class="w3-theme-l5">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../scripts/redirect.js"></script>
-    <script src="../scripts/onlaunch/onlaunchhome.js"></script>
+    <script src="../scripts/onlaunch/onlaunchattending.js"></script>
 
     <!-- Navbar -->
     <div class="w3-top">
      <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-      <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white" title="Home"><i class="fa fa-home"></i></a>
-      <a href="/attending" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Attending"><i class="fa fa-spinner"></i></a>
+      <a href="/home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Home"><i class="fa fa-home"></i></a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white" title="Attending"><i class="fa fa-spinner"></i></a>
       <a href="/resolved" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Resolved"><i class="fa fa-check-square-o"></i></a>
       <div class="w3-dropdown-hover w3-right">
          <span class="w3-button w3-hide-small w3-padding-large accName"></span>
@@ -36,8 +36,8 @@
     <!-- Navbar on small screens
     <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
       <a href="#" class="w3-bar-item w3-button w3-padding-large">...</a>
-      <a class="w3-bar-item w3-button w3-padding-large">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">Account Settings</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+      <a class="w3-bar-item w3-button w3-padding-large">Account Settings</a>
       <a href="#" class="w3-bar-item w3-button w3-padding-large">Notification</a>
     </div>-->
 
@@ -69,7 +69,7 @@
             <div class="w3-col m12">
               <div class="w3-card w3-round w3-white">
                 <div class="w3-container w3-padding w3-center">
-                  <h4>Available Tickets <span class="w3-badge" id="ticket-number">0</span></h4>
+                  <h4>Attending Tickets <span class="w3-badge" id="ticket-number">0</span></h4>
                   <button type="button" class="w3-button" id="refresh-button"><i class="fa fa-refresh"></i>  Refresh</button>
                 </div>
               </div>
@@ -126,7 +126,7 @@
      </div>
     </footer>
 
-    <script src="../scripts/home.js"></script>
+    <script src="../scripts/attending.js"></script>
     <script src="../scripts/logout.js"></script>
   </body>
 </html>
