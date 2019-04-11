@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACNAPI - Attending Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../images/cs-logo-1.png" type="image/png">
+  </head>
+
+  <body class="w3-theme-l5" id="attending">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="../scripts/redirect.js"></script>
+    <script src="../scripts/onlaunch/onlaunchattending.js"></script>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="/home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Home"><i class="fa fa-home"></i></a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white" title="Attending"><i class="fa fa-spinner"></i></a>
+      <a href="/resolved" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Resolved"><i class="fa fa-check-square-o"></i></a>
+      <div class="w3-dropdown-hover w3-right">
+         <span class="w3-button w3-hide-small w3-padding-large accName"></span>
+         <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+           <span class="w3-bar-item w3-btn" onclick="logmeout()">Log out</span>
+         </div>
+       </div>
+     </div>
+    </div>
+
+    <!-- Navbar on small screens
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">...</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+      <a class="w3-bar-item w3-button w3-padding-large">Account Settings</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Notification</a>
+    </div>-->
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+      <!-- The Grid -->
+      <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+          <!-- Profile -->
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container">
+             <h4 class="w3-center">My Profile</h4>
+             <p class="w3-center"><img src="../images/user-logo.png" style="height:50px;width:50px" alt="Avatar"></p>
+             <p class="w3-center accName"></p>
+             <hr>
+             <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Customer Relation, API</p>
+             <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Technology Department</p>
+            </div>
+          </div>
+          <br>
+        <!-- End Left Column -->
+        </div>
+
+        <!-- Middle Column -->
+        <div class="w3-col m7">
+
+          <div class="w3-row-padding">
+            <div class="w3-col m12">
+              <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding w3-center">
+                  <h4>Attending Tickets <span class="w3-badge" id="ticket-number">0</span></h4>
+                  <button type="button" class="w3-button" id="refresh-button"><i class="fa fa-refresh"></i>  Refresh</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="root-home"></div>
+
+          <!--
+          <div class='w3-container w3-card w3-white w3-round w3-margin ticket-card' id='" + tixId + "'>
+            <br>
+            <span class='w3-right w3-margin-right w3-opacity'>" + status + "</span>
+            <h3 class='cat-design'>" + category + "</h3>
+            <h5 class='w3-left'>" + subject + "</h5>
+            <br>
+            <hr class='w3-clear'>
+            <p>" + details + "</p>
+            <button type='button' class='w3-button w3-theme-d1 w3-margin-bottom'><i class='fa fa-wrench'></i>  Solve Issue</button>
+          </div>
+          -->
+
+        <!-- End Middle Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-col m2">
+
+          <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+            <p>Sorting Feature</p>
+          </div>
+          <br>
+
+          <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+            <p>Secondary Feature</p>
+          </div>
+          <br>
+
+        <!-- End Right Column -->
+        </div>
+
+      <!-- End Grid -->
+      </div>
+
+    <!-- End Page Container -->
+    </div>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+     <div class="footer-design">
+       <span class="left-footer"><a href=# class="text-muted">Terms of Use - </a><a href=# class="text-muted">Privacy Policy - </a><a href=# class="text-muted">About Us - </a></span>
+       &nbsp;
+       <span class="text-muted right-footer">Copyright © 2019 Cohort 1 Group 5. All Rights Reserved</span>
+     </div>
+    </footer>
+
+    <script src="../scripts/attending.js"></script>
+    <script src="../scripts/logout.js"></script>
+  </body>
+</html>
