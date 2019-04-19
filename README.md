@@ -28,17 +28,13 @@ For testing, setup with (in the same directory):
 
 - npm install -g -save mocha
 - npm install chai
-- npm install tape
-- npm install supertest
+- npm install --save-dev supertest tape
 
-Add a depedency on the package-json file:
+Before test execution:
 
-'''
-"scripts": {
-    "test": "node ./test/pathTesting2.js | tap-spec"
-  }
-'''
+- go to index.js file, and comment out this line: " app.listen(process.env.port || 3000); "
+
 
 Test is executed with the command:
 
-- node test
+- npm test
