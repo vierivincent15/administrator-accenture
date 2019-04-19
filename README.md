@@ -24,14 +24,21 @@ Web application can be accessed from:
 
 ## Testing
 
-For testing, setup with:
+For testing, setup with (in the same directory):
 
 - npm install -g -save mocha
 - npm install chai
-- npm install selenium-webdriver
-- npm install chromedriver
+- npm install tape
+- npm install supertest
 
-Then open 2 command prompts:
-> node index.js
+Add a depedency on the package-json file:
 
-> mocha test/loginTest.js
+'''
+"scripts": {
+    "test": "node ./test/pathTesting2.js | tap-spec"
+  }
+'''
+
+Test is executed with the command:
+
+- node test
