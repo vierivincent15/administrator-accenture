@@ -42,7 +42,7 @@ router.get('/ticket_resolved',function(req,res){
 });
 
 let lastObjectId = "undefined";
-let viewClickedTicketId;
+let viewClickedTicketId = null;
 let stdGlobalTicketObjId = "UD4BuxLR3v";
 
 //Updates viewClickedTicketId with chosen ticket
@@ -284,5 +284,7 @@ app.post('/getHistoryObjectId', function (req, res) {
     });
 })
 
-app.listen(process.env.port || 3000);
-console.log('Running at Port 3000');
+ app.listen(process.env.port || 3000);
+ console.log('Running at Port 3000');
+
+module.exports = app;
