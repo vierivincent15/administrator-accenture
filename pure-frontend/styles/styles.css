@@ -48,9 +48,12 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
   background-size: cover;
 }
 
+.homepage-design{
+  margin-top: 10vh;
+}
 
 .align-text{
-  margin-top: 5vh;
+  margin-top: 10vh;
   text-align: center;
 }
 
@@ -64,7 +67,7 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
   background-color: rgba(215,221,229,0.75);
   width: 400px;
   /*height: 320px;*/
-  height: 390px;
+  height: 300px;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -134,11 +137,6 @@ html, body, h1, h2, h3, h4, h5, div, span, p, a, button, form {
 .topdown-padding{
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-.leftright-padding{
-  margin-left: 30px;
-  margin-right: 15px;
 }
 
 

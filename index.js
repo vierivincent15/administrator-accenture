@@ -3,7 +3,6 @@ const path = require('path');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const unirest = require("unirest");
-const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -140,14 +139,6 @@ app.post('/updateGlobal', function (req, res) {
 
   let request = unirest("PUT", "https://ug-api.acnapiv3.io/swivel/acnapi-common-services/common/classes/GameScore/" + stdGlobalTicketObjId);
 
-  let data;
-  if(typeof req.body["new"] === "undefined"){
-      data = [];
-  }
-  else{
-    data =req.body["new"];
-  }
-
   request.headers({
     "Postman-Token": "1d90c285-1a8e-45bc-9df1-992d0cca25d4",
     "cache-control": "no-cache",
@@ -157,7 +148,7 @@ app.post('/updateGlobal', function (req, res) {
 
   request.type("json");
   request.send({
-    "global": data
+    "global": req.body["new"]
   });
 
   request.end(function (response) {
@@ -247,18 +238,6 @@ app.post('/updateTicketInfo', function (req, res) {
   let ticketId = req.body["id"];
   let update = req.body["update"];
 
-
-  if(req.body["type"] === "pending" && typeof req.body.update === "undefined"){
-    update = {"pending": []};
-  }
-  else if(req.body["type"] === "attended" && typeof req.body.update === "undefined"){
-    update = {"attended": []};
-  }
-  else if(req.body["type"] === "resolved" && typeof req.body.update === "undefined"){
-    update = {"resolved": []};
-  }
-
-
   let request = unirest("PUT", "https://ug-api.acnapiv3.io/swivel/acnapi-common-services/common/classes/GameScore/" + ticketId);
 
   request.headers({
@@ -301,36 +280,6 @@ app.post('/getHistoryObjectId', function (req, res) {
       else{
         output = response.body["ticket_history"];
         res.send(output);
-      }
-    });
-})
-
-//Request to send email to a particular user
-app.post('/sendMail', function(req, res) {
-  var transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'dummy.email.50003@gmail.com',
-        pass: 'dummy50003'
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-    });
-
-    var mailOptions = {
-      from: 'dummy.email.50003@gmail.com',
-      to: req.body["email"],
-      subject: "Email reply to submitted ticket",
-      text: req.body["email_content"]
-    };
-
-    transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-        transporter.close();
       }
     });
 })

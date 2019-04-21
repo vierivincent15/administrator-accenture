@@ -73,9 +73,7 @@ function getUserAndAdminObjectIds(){
                 success: function (res) {
                   console.log(res);
                   getHistoryObjectId(res["adminId"]);
-                  if(res["userId"] != ""){
-                    getHistoryObjectIdUser(res["userId"]);
-                  }
+                  getHistoryObjectIdUser(res["userId"]);
               }
           });
 }
@@ -130,7 +128,7 @@ function updateToPending(historyObjectId){
                     $.ajax({
                                   url: "/updateTicketInfo",
                                   type: "post",
-                                  data: {"id": historyObjectId, "update": updatePending, "type": "pending"},
+                                  data: {"id": historyObjectId, "update": updatePending},
                                   success: function (res) {
                                     console.log("history updated");
                                     updateToAttended(historyObjectId);
@@ -154,15 +152,10 @@ function updateToAttended(historyObjectId){
                     $.ajax({
                                   url: "/updateTicketInfo",
                                   type: "post",
-                                  data: {"id": historyObjectId, "update": updateAttended, "type": "attended"},
+                                  data: {"id": historyObjectId, "update": updateAttended},
                                   success: function (res) {
                                     console.log("history updated");
-                                    if($("#email_identifier").hasClass("needEmail")){
-                                      launchPage2();
-                                    }
-                                    else{
-                                      launchPage();
-                                    }
+                                    launchPage();
                                 }
                             });
                 }
@@ -176,18 +169,6 @@ function launchPage(){
   }
   else{
     counter = 0
-    window.alert("You're in charge of this ticket now!")
-    window.open("/ticket_details", "_self");
-  }
-}
-
-let counter2 = 0
-function launchPage2(){
-  if(counter2 != 0){
-    counter2++;
-  }
-  else{
-    counte2r = 0
     window.alert("You're in charge of this ticket now!")
     window.open("/ticket_details", "_self");
   }

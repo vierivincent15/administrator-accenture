@@ -19,10 +19,6 @@ $.ajax({
                   $("#email").text(res["email"]);
                   $("#phone").text(res["phone"]);
                   $("#company").text(res["company"]);
-                  if(res["userId"] === ""){
-                    $(".w3-white").removeClass("w3-white").addClass("w3-sand");
-                    $("#email_identifier").addClass("needEmail");
-                  }
                   let imageStringArray = res["photo_ref_"];
                   if(typeof imageStringArray === "undefined" || imageStringArray === []){
                   }

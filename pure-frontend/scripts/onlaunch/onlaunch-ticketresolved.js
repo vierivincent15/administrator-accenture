@@ -19,9 +19,6 @@ $.ajax({
                   $("#email").text(res["email"]);
                   $("#phone").text(res["phone"]);
                   $("#company").text(res["company"]);
-                  if(res["userId"] === ""){
-                    $(".w3-white").removeClass("w3-white").addClass("w3-sand");
-                  }
                   let talk_array = res["talk"];
                   $("#last-who").text(talk_array[talk_array.length-1][0] + ": ");
                   $("#last-what").text(talk_array[talk_array.length-1][1]);

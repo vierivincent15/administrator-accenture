@@ -2,16 +2,12 @@ $("#login-button").on("click",function() {
   let admin = $("#adminUsername").val();
   let pw = $("#adminPassword").val();
   let verf =$("#adminVerf").val();
-  let nonHuman = grecaptcha.getResponse().length == 0;
-  checkInput(admin, pw, verf, nonHuman);
+  checkInput(admin, pw, verf);
 })
 
-function checkInput(admin, pw, verf, nonHuman){
+function checkInput(admin, pw, verf){
   if(admin == "" || pw == "" || verf == ""){
     window.alert("Kindly fill in all the fields.");
-  }
-  else if(nonHuman){
-    document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
   }
   else{
     adminLogin(admin, pw, verf);
