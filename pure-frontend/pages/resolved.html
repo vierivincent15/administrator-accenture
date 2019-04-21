@@ -15,7 +15,7 @@
   <body class="w3-theme-l5" id="resolved">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../scripts/redirect.js"></script>
-    <script src="../scripts/onlaunch/onlaunchresolved.js"></script>
+    <!--<script src="../scripts/onlaunch/onlaunchresolved.js"></script>-->
 
     <!-- Navbar -->
     <div class="w3-top">
@@ -51,7 +51,7 @@
           <div class="w3-card w3-round w3-white">
             <div class="w3-container">
              <h4 class="w3-center">My Profile</h4>
-             <p class="w3-center"><img src="../images/user-logo.png" style="height:50px;width:50px" alt="Avatar"></p>
+             <p class="w3-center"><img src="../images/user-logo.png" style="height:100px;width:100px" alt="Avatar"></p>
              <p class="w3-center accName"></p>
              <hr>
              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Customer Relation, API</p>
@@ -96,16 +96,28 @@
 
         <!-- Right Column -->
         <div class="w3-col m2">
-
-          <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-            <p>Sorting Feature</p>
+          <div class="w3-card w3-round w3-white w3-padding-16">
+            <div class="w3-center">
+              <h5>Category Sort</h5>
+            </div>
+            <hr>
+            <div class="w3-display-container leftright-padding topdown-padding">
+              <input class="w3-check" type="checkbox" id="category1">
+              <label> Smart Technology</label>
+            </div>
+            <div class="w3-display-container leftright-padding topdown-padding">
+              <input class="w3-check" type="checkbox" id="category2">
+              <label> Aesop</label>
+            </div>
+            <div class="w3-display-container leftright-padding topdown-padding">
+              <input class="w3-check" type="checkbox" id="category3">
+              <label> APIs</label>
+            </div>
+            <br>
+            <div class="w3-center">
+              <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom w3-center" id="sort-button">Sort</button>
+            </div>
           </div>
-          <br>
-
-          <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-            <p>Secondary Feature</p>
-          </div>
-          <br>
 
         <!-- End Right Column -->
         </div>

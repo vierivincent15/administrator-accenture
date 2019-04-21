@@ -33,6 +33,13 @@ $("#resolve-button").on("click",function() {
   //window.open("/resolved", "_self");
 });
 
+$("#reply-button").on("click",function() {
+  if($("#email_identifier").hasClass("needEmail")){
+    getTicketAdminObjectId();
+  }
+
+})
+
 function getTicketAdminObjectId(){
   $.ajax({
                 url: "/getTicketAdminId",
@@ -66,7 +73,9 @@ function getUserAndAdminObjectIds(){
                 success: function (res) {
                   console.log(res);
                   getHistoryObjectId(res["adminId"]);
-                  getHistoryObjectId(res["userId"]);
+                  if(res["userId"] != ""){
+                    getHistoryObjectId(res["userId"]);
+                  }
               }
           });
 }
@@ -104,7 +113,7 @@ function updateToAttended(historyObjectId){
                     $.ajax({
                                   url: "/updateTicketInfo",
                                   type: "post",
-                                  data: {"id": historyObjectId, "update": updateAttended},
+                                  data: {"id": historyObjectId, "update": updateAttended, "type": "attended"},
                                   success: function (res) {
                                     console.log("history updated");
                                     updateToResolved(historyObjectId);
@@ -128,10 +137,15 @@ function updateToResolved(historyObjectId){
                     $.ajax({
                                   url: "/updateTicketInfo",
                                   type: "post",
-                                  data: {"id": historyObjectId, "update": updateResolved},
+                                  data: {"id": historyObjectId, "update": updateResolved, "type": "resolved"},
                                   success: function (res) {
                                     console.log("history updated");
-                                    launchPage();
+                                    if($("#email_identifier").hasClass("needEmail")){
+                                      launchPage2();
+                                    }
+                                    else{
+                                      launchPage();
+                                    }
                                 }
                             });
                 }
@@ -146,6 +160,18 @@ function launchPage(){
   else{
     counter = 0
     window.alert("You've resolved this ticket!")
+    window.open("/ticket_resolved", "_self");
+  }
+}
+
+let counter2 = 0
+function launchPage2(){
+  if(counter2 != 0){
+    counter2++;
+  }
+  else{
+    counte2r = 0
+    window.alert("You've resolved this ticket by email!")
     window.open("/ticket_resolved", "_self");
   }
 }

@@ -22,7 +22,7 @@
       </div>
     </nav>
 
-  <main class="homepage-design">
+  <main>
     <div class="align-text">
       <h1 style="color:#FFFFFF">ACNAPI - Administrator Web Application</h1>
       <p style="color:#d7dde5;">Admin's One-stop Platform for Ticket Management</p>
@@ -61,6 +61,9 @@
               </input>
             </div>
           </div>
+          <div class="g-recaptcha" data-sitekey="6LdsXZ8UAAAAAI7Su3TZcKiqoVDBRq8ZGPt7qJ89" data-callback="verifyCaptcha"></div>
+          <div id="g-recaptcha-error"></div>
+          <br/>
           <div class="btn-middle">
             <button id="login-button" class="btn btn-primary btn-login" type="button">Admin Login</button>
           </div>
@@ -71,6 +74,7 @@
   </main>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="scripts/script.js"></script>
   <script src="scripts/login.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
