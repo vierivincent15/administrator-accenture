@@ -15,6 +15,7 @@ Required node-modules can be obtained by executing these lines in the command pr
 And node dependencies can be obtained by executing these lines:
 - npm install express
 - npm install unirest
+- npm install nodemailer
 
 Lastly, server can be executed by executing:
 - node index.js
