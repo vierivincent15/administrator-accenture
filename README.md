@@ -39,3 +39,7 @@ Before test execution:
 Test is executed with the command:
 
 - npm test
+
+##  User Side
+
+- The other half of this project (user) can be found in the following github link: https://github.com/pencilleaf/Ticket-system-accenture
