@@ -2,6 +2,8 @@
 
 Full Stack web development for Administrator
 
+This project is part of a bigger collective project. This repo contain source code for the administrator web application as well as the test code for back end testing
+
 ## Installation
 
 These files need to be executed with node.js environment and node-modules.
@@ -43,3 +45,7 @@ Test is executed with the command:
 ##  User Side
 
 - The other half of this project (user) can be found in the following github link: https://github.com/pencilleaf/Ticket-system-accenture
+
+##  System Testing
+
+- System testing as well as frontend testing of this project can be found in the following github link:
